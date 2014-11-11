@@ -5,8 +5,26 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700,400' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
+<div class="title-container">
+	<div class="row">
+		<div class="small-12 columns text-center">
+			<h1>Quiltsy</h1>
+		</div>
+	</div>
+</div>
 
 <%= yield %>
 

@@ -1,0 +1,56 @@
+html, body {
+	margin:0;
+	padding:0;
+  background-color:mintcream;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+	margin:0;
+	padding:0;
+}
+
+a {
+	color:#999;
+	text-decoration: none;
+  line-height: inherit;
+  letter-spacing: inherit;
+  -webkit-transition-property:color, border, background;
+  -webkit-transition-duration: 0.15s, 0.15s, 0.15s;
+  -webkit-transition-timing-function: ease-in, ease-in, ease-in;
+  -moz-transition-property:color, border, background;
+  -moz-transition-duration: 0.15s, 0.15s, 0.15s;
+  -moz-transition-timing-function: ease-in, ease-in, ease-in;
+  -ms-transition-property:color, border, background;
+  -ms-transition-duration: 0.15s, 0.15s, 0.15s;
+  -ms-transition-timing-function: ease-in, ease-in, ease-in;
+  -o-transition-property:color, border, background;
+  -o-transition-duration: 0.15s, 0.15s, 0.15s;
+  -o-transition-timing-function: ease-in, ease-in, ease-in;
+  transition-property:color, border, background;
+  transition-duration: 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in, ease-in, ease-in;
+  &:hover, &:focus {
+    color: #222;
+  }
+}
+
+p {
+
+}
+
+h1 {
+	font-family: 'Roboto Slab', serif;
+	font-weight:normal;
+	font-size:4.5em;
+	letter-spacing:0.025em;
+	color:mintcream;
+}
+
+.title-container {
+	width:100%;
+	height:240px;
+	background-color: mediumturquoise;
+	h1 {
+		margin:0.75em 0 0 0;
+	}
+}

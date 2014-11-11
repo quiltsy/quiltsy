@@ -1,0 +1,11 @@
+<h1>Manufacturer Details</h1>
+
+<h2><%= @manufacturer.name %></h2>
+
+<h3>Website: <%= @manufacturer.website %></h3>
+
+<% @manufacturer.fabric_collections.each do |f| %>
+
+	<%= link_to f.name, fabric_collection_path(f) %>
+
+<% end %>

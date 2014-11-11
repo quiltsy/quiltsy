@@ -1,0 +1,77 @@
+// Place all the styles related to the Fabric controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.search-container {
+	.search-area {
+		width:100%;
+		background-color: #632637;
+    border-bottom:9px solid #DF4D39;
+		margin:0 0 2.25em 0;
+		padding:2.25em 0;
+		.search-bar {
+
+		}
+	}
+
+	.search-results{
+
+	}
+}
+
+input {
+	outline: 0;
+	border:none;
+	background:none;
+	margin:0;
+	padding:0;
+	color:mintcream;
+	font-size:1.313em;
+	font-weight: 300;
+	letter-spacing: 0.025rem;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	::-webkit-input-placeholder {
+    opacity: 1;
+  }
+	&:focus::-webkit-input-placeholder {
+    opacity:0.25;
+    -webkit-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #cccccc;
+    opacity: 0.75;
+  }
+  &:focus:-moz-placeholder { /* Firefox 18- */
+    opacity: 0.25;
+    -moz-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: #cccccc;
+    opacity: 0.75;
+  }
+  &:focus::-moz-placeholder {  /* Firefox 19+ */
+    opacity: 0.25;
+    -moz-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
+  }
+  :-ms-input-placeholder {
+    color: #cccccc;
+    opacity: 0.75;
+  }
+  &:focus:-ms-input-placeholder {
+    opacity: 0.25;
+    -ms-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
+  }
+}
+
+input.input-search {
+  width:18em;
+	// margin:0.5em 0;
+	// padding:0.75em;
+}

@@ -1,6 +1,33 @@
 Quiltsy::Application.routes.draw do
 
-  root 'home#index'
+  # Users
+  devise_for :users
+  # get ":username", to: "users#show", as: "username"
+  # get ":username/edit", to: "users#edit", as: "edit_username"
+
+  # Home Page
+  root'home#index'
+
+  # Manufacturers
+  resources :manufacturers
+
+  # Fabric URLS
+  resources :fabric_collections
+  resources :fabrics
+
+  # Internal APIs
+  namespace :api do
+    namespace :v1 do
+      # Fabric API
+      get "fabric/get_fabric", to: "fabrics#get_fabric"
+      post "fabric/add_fabric", to: "fabrics#add_fabric"
+
+      get "fabric/get_uncolored", to: "fabrics#get_uncolored"
+      # post "fabric/add_color", to: "fabrics#add_color"
+    end
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,38 @@
+<div class="search-container">
+	<div class="search-area">
+		<div class="row">
+			<%= form_tag fabrics_path, method: :get do %>
+			  <div class="small-12 medium-9 medium-centered columns text-center">
+			    <%= text_field_tag :query, params[:query], autofocus: true, class: "input-search", placeholder: "search fabrics" %>
+			    <%= submit_tag "Go", name: nil, style: "color:#DF4D39;font-weight:normal;margin-right:9px" %>
+			  </div>
+			<% end %>
+			</div>
+		</div>
+	</div>
+
+	<div class="search-results">
+		<div class="row">
+			<% @fabrics.each do |fabric| %>
+				<div class="small-6 medium-3 columns">
+					<div class="card card-search">
+						<div class="row">
+							<div class="small-12 columns">
+					  		<div class="card-image" style="background-image:url('<%= fabric.fabric_image.mobile_320 %>')"></div>
+					  	</div>
+					  	<div class="small-12 columns">
+					  		<div class="card-text">
+							  	<h4>
+								    <%= link_to fabric.name, fabric_path(fabric) %>
+								  </h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+
+	<%= will_paginate @fabrics %>
+</div>

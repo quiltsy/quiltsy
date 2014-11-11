@@ -1,1 +1,5 @@
-<h1>Hello there, welcome to Quiltsy!</h1>
+<h1>Hello there!</h1>
+
+<% @manufacturers.each do |m| %>
+	<%= link_to m.name, manufacturers_path(@manufacturer) %>
+	<% end %>

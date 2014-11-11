@@ -1,0 +1,22 @@
+.card {
+  background:#fff;
+  margin:0 0 32px 0;
+  .card-image {
+    background-position: center;
+    background-size: cover;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.card-search {
+	// height:300px;
+	.card-image {
+		height:12em;
+	}
+	.card-text {
+		height:3.75em;
+		padding:0.75em;
+	}
+}
