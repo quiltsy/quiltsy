@@ -3,15 +3,15 @@ class CreateFabrics < ActiveRecord::Migration
     create_table :fabrics do |t|
     	t.integer :fabric_collection_id
     	t.string :name
-    	t.string :category
       t.string :manufacturer
       t.string :collection
+      t.string :category
       t.string :designer
-      t.string :origin
-      t.string :theme
+      t.string :material
+      t.string :weight
+      t.string :tags
       t.string :link
       t.text :description
-      t.text :material
       t.text :care
       t.decimal :width_in
       t.decimal :width_mm

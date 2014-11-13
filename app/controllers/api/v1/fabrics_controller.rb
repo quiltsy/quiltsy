@@ -24,7 +24,6 @@ module Api
         name = params[:name]
         manufacturer = params[:manufacturer]
         collection = params[:collection]
-        origin = params[:origin]
         material = params[:material]
         width_in = params[:width_in]
         width_mm = params[:width_mm]
@@ -57,7 +56,6 @@ module Api
         fabric.name = name
         fabric.manufacturer = manufacturer
         fabric.collection = collection
-        fabric.origin = origin
         fabric.material = material
         fabric.width_in = width_in
         fabric.width_mm = width_mm

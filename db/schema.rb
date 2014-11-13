@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141109010406) do
+ActiveRecord::Schema.define(version: 20141113195113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20141109010406) do
     t.string   "name"
     t.string   "link"
     t.string   "designer"
-    t.text     "material"
+    t.string   "material"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -46,15 +46,15 @@ ActiveRecord::Schema.define(version: 20141109010406) do
   create_table "fabrics", force: true do |t|
     t.integer  "fabric_collection_id"
     t.string   "name"
-    t.string   "category"
     t.string   "manufacturer"
     t.string   "collection"
+    t.string   "category"
     t.string   "designer"
-    t.string   "origin"
-    t.string   "theme"
+    t.string   "material"
+    t.string   "weight"
+    t.string   "tags"
     t.string   "link"
     t.text     "description"
-    t.text     "material"
     t.text     "care"
     t.decimal  "width_in"
     t.decimal  "width_mm"
@@ -64,10 +64,11 @@ ActiveRecord::Schema.define(version: 20141109010406) do
 
   add_index "fabrics", ["category"], name: "fabrics_category", using: :gin
   add_index "fabrics", ["collection"], name: "fabrics_collection", using: :gin
+  add_index "fabrics", ["designer"], name: "fabrics_designer", using: :gin
   add_index "fabrics", ["manufacturer"], name: "fabrics_manufacturer", using: :gin
   add_index "fabrics", ["material"], name: "fabrics_material", using: :gin
   add_index "fabrics", ["name"], name: "fabrics_name", using: :gin
-  add_index "fabrics", ["theme"], name: "fabrics_theme", using: :gin
+  add_index "fabrics", ["tags"], name: "fabrics_tags", using: :gin
 
   create_table "manufacturers", force: true do |t|
     t.string   "name"
