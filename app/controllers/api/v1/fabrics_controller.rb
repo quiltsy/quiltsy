@@ -10,7 +10,7 @@ module Api
         respond_with Fabric.create
       end
 
-			def get_uncolored
+      def get_uncolored
         respond_with Fabric.where(color: nil)
       end
 
@@ -24,7 +24,11 @@ module Api
         name = params[:name]
         manufacturer = params[:manufacturer]
         collection = params[:collection]
+        category = params[:category]
+        designer = params[:designer]
         material = params[:material]
+        tags = params[:tags]
+        weight = params[:weight]
         width_in = params[:width_in]
         width_mm = params[:width_mm]
         description = params[:description]
@@ -56,7 +60,11 @@ module Api
         fabric.name = name
         fabric.manufacturer = manufacturer
         fabric.collection = collection
+        fabric.category = category
+        fabric.designer = designer
+        fabric.tags = tags
         fabric.material = material
+        fabric.weight = weight
         fabric.width_in = width_in
         fabric.width_mm = width_mm
         fabric.description = description
