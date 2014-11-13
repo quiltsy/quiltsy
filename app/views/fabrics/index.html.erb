@@ -22,6 +22,9 @@
 					  	</div>
 					  	<div class="small-12 columns">
 					  		<div class="card-text">
+							  	<h5>
+							  		<%= link_to fabric.fabric_collection.name, fabric_collection_path(fabric) %>
+							  	</h5>
 							  	<h4>
 								    <%= link_to fabric.name, fabric_path(fabric) %>
 								  </h4>
@@ -34,5 +37,10 @@
 		</div>
 	</div>
 
-	<%= will_paginate @fabrics %>
+	<div class="row">
+		<div class="small-12 columns text-center">
+			<%= will_paginate @fabrics %>
+		</div>
+	</div>
+
 </div>

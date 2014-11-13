@@ -1,10 +1,19 @@
-<h1>Fabric Collection Details</h1>
 
-<h2><%= @fabric_collection.name %></h2>
-<h4>By <%= @manufacturer.name %></h4>
 
-<% @fabric_collection.fabrics.each do |f| %>
+<div class="row">
+	<div class="small-12 columns">
+		<h2><%= @fabric_collection.name %></h2>
+		<h4>By <%= @manufacturer.name %></h4>
+	</div>
+</div>
 
-	<%= link_to f.name, fabric_collection_fabric_path(@fabric_collection, f) %>
+<div class="row">
+	<% @fabric_collection.fabrics.each do |f| %>
+		
+		<div class="small-6 medium-3 columns end">
+			<%= image_tag(f.fabric_image.mobile_160) %>
+			<%= link_to f.name, fabric_path(f) %>
+		</div>
 
-<% end %>
+	<% end %>
+</div>

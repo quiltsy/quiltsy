@@ -1,3 +1,18 @@
-<h1>Fabric Details</h1>
+<br ><br ><br >
+<div class="row">
+	<div class="small-12 medium-6 columns">
+		<h2><%= @fabric.name %></h2><br >
 
-<h2><%= @fabric.name %></h2>
+		<%= image_tag(@fabric.fabric_image.mobile_720) %>
+
+	</div>
+
+	<div class="small-12 medium-6 columns">
+		<h4>Manufacturer: <%= link_to @fabric.manufacturer, manufacturer_path(@fabric) %></h4>
+		<h4>Collection: <%= link_to @fabric.collection, fabric_collection_path(@fabric) %></h4>
+		<h4>Designer: <%= @fabric.designer %></h4>
+		<h4>Material: <%= @fabric.material %></h4>
+		<h4>Width: <%= @fabric.width_in %> inches</h4>
+		<h4>Description: <%= @fabric.description %></h4>
+	</div>
+</div>

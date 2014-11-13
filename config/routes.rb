@@ -6,13 +6,15 @@ Quiltsy::Application.routes.draw do
   # get ":username/edit", to: "users#edit", as: "edit_username"
 
   # Home Page
-  root'fabrics#index'
+  root "fabrics#index"
 
   # Manufacturers
   resources :manufacturers
 
   # Fabric URLS
   resources :fabric_collections
+
+
   resources :fabrics
 
   # Internal APIs
