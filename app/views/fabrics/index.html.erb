@@ -18,12 +18,14 @@
 					<div class="card card-search">
 						<div class="row">
 							<div class="small-12 columns">
-					  		<div class="card-image" style="background-image:url('<%= fabric.fabric_image.mobile_320 %>')"></div>
+								<%= link_to fabric_path(fabric) do %>
+					  			<div class="card-image" style="background-image:url('<%= fabric.fabric_image.mobile_320 %>')"></div>
+					  		<% end %>
 					  	</div>
 					  	<div class="small-12 columns">
 					  		<div class="card-text">
 							  	<h5>
-							  		<%= link_to fabric.fabric_collection.name, fabric_collection_path(fabric) %>
+							  		<%= link_to fabric.fabric_collection.name, fabric_collection_path(fabric.fabric_collection) %>
 							  	</h5>
 							  	<h4>
 								    <%= link_to fabric.name, fabric_path(fabric) %>
