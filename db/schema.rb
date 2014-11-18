@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141117171003) do
+ActiveRecord::Schema.define(version: 20141118071615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20141117171003) do
     t.string   "designer"
     t.string   "material"
     t.string   "weight"
-    t.string   "tags"
+    t.string   "keywords"
     t.string   "link"
     t.text     "description"
     t.text     "care"
@@ -67,10 +67,10 @@ ActiveRecord::Schema.define(version: 20141117171003) do
   add_index "fabrics", ["category"], name: "fabrics_category", using: :gin
   add_index "fabrics", ["collection"], name: "fabrics_collection", using: :gin
   add_index "fabrics", ["designer"], name: "fabrics_designer", using: :gin
+  add_index "fabrics", ["keywords"], name: "fabrics_tags", using: :gin
   add_index "fabrics", ["manufacturer"], name: "fabrics_manufacturer", using: :gin
   add_index "fabrics", ["material"], name: "fabrics_material", using: :gin
   add_index "fabrics", ["name"], name: "fabrics_name", using: :gin
-  add_index "fabrics", ["tags"], name: "fabrics_tags", using: :gin
 
   create_table "manufacturers", force: true do |t|
     t.string   "name"

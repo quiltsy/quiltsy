@@ -27,7 +27,7 @@ module Api
         category = params[:category]
         designer = params[:designer]
         material = params[:material]
-        tags = params[:tags]
+        keywords = params[:keywords]
         weight = params[:weight]
         width_in = params[:width_in]
         width_mm = params[:width_mm]
@@ -64,7 +64,7 @@ module Api
         fabric.collection = collection
         fabric.category = category
         fabric.designer = designer
-        fabric.tags = tags
+        fabric.keywords = keywords
         fabric.material = material
         fabric.weight = weight
         fabric.width_in = width_in

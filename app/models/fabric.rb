@@ -9,7 +9,7 @@ class Fabric < ActiveRecord::Base
 
 	# Fabric search
 	pg_search_scope :text_search,
-                  against: [:name, :manufacturer, :collection, :category, :tags, :material],
+                  against: [:name, :manufacturer, :collection, :category, :keywords, :material],
                   ignoring: :accents,
                   using: {
                     tsearch: {
@@ -17,7 +17,7 @@ class Fabric < ActiveRecord::Base
                       prefix: true
                     },
                     trigram: {
-                      only: [:name, :manufacturer, :collection, :category, :tags, :material],
+                      only: [:name, :manufacturer, :collection, :category, :keywords, :material],
                       threshold: 0.1
                     },
                     # :dmetaphone
