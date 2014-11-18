@@ -22,6 +22,7 @@ module Api
         id = params[:id]
         link = params[:link]
         name = params[:name]
+        item_num = params[:item_num]
         manufacturer = params[:manufacturer]
         collection = params[:collection]
         category = params[:category]
@@ -60,6 +61,7 @@ module Api
         fabric.fabric_collection_id = fabric_collection.id
         fabric.link = link
         fabric.name = name
+        fabric.item_num = item_num
         fabric.manufacturer = manufacturer
         fabric.collection = collection
         fabric.category = category
