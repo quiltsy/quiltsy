@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141113195113) do
+ActiveRecord::Schema.define(version: 20141117171003) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 20141113195113) do
     t.string   "mobile_160"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "ruler_in"
+    t.decimal  "ruler_mm"
   end
 
   create_table "fabrics", force: true do |t|

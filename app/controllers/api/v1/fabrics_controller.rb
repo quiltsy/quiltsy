@@ -16,7 +16,7 @@ module Api
 
 
       # POST requests
-			def add_fabric
+	  def add_fabric
 
         # Fabricator info variables
         id = params[:id]
@@ -42,6 +42,8 @@ module Api
         mobile_480 = params[:mobile_480]
         mobile_320 = params[:mobile_320]
         mobile_160 = params[:mobile_160]
+        ruler_in = params[:ruler_in]
+        ruler_mm = params[:ruler_mm]
 
         # Find or create manufacturer
         fabric_manufacturer = Manufacturer.find_or_create_by(name: manufacturer)
@@ -83,6 +85,8 @@ module Api
         fabric_image.mobile_480 = mobile_480
         fabric_image.mobile_320 = mobile_320
         fabric_image.mobile_160 = mobile_160
+        fabric_image.ruler_in = ruler_in
+        fabric_image.ruler_mm = ruler_mm
         fabric_image.save
 
         render nothing: true
